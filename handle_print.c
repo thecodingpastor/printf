@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * handle_print - prints args 
- * @specifier: arg 1
+ * handle_print - prints args
+ * @spec: arg 1
  * @passed_params: arg 2
  * Return: an integer
  */
@@ -28,9 +28,9 @@ int handle_print(char spec, va_list passed_params)
 	else if (spec == 'o')
 		return (print_octal(va_arg(passed_params, unsigned int)));
 	else if (spec == 'r')
-		return (printRev(va_arg(passedParams, char *)));
-	else if (specifier == 'p')
-		return (printPointer(va_arg(passedParams, char *)));
-	_putchar('%'), _putchar(specifier);
+		return (print_rev(va_arg(passed_params, char *)));
+	else if (spec == 'p')
+		return (print_pointer(va_arg(passed_params, char *)));
+	_putchar('%'), _putchar(spec);
 	return (2);
 }
