@@ -10,9 +10,9 @@ int print_binary(unsigned int number)
 
 	if (number > 1)
 	{
-		chars_printed += print_binary(num / 2);
+		chars_printed += print_binary(number / 2);
 	}
-	_putchar('0' + num % 2);
+	_putchar('0' + number % 2);
 	chars_printed++;
 	return (chars_printed);
 }
